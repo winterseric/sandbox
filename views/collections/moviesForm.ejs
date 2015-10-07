@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <% include ../partials/head %>
+</head>
+<body>
+    <% include ../partials/header.ejs %>
+
+    <p><% include ../partials/collectionNavigation.ejs %></p>
+
+    <p>
+        <form action="<%= formUrl %>" method="post">
+            <table width="300">
+                <tr>
+                    <td width="110">Title:</td><td><input type="text" name="title" value="<%= movieTitle %>" required /></td>
+                </tr>
+                <tr>
+                    <td>Genre:</td><td><input type="text" name="genre" value="<%= genre %>" required /></td>
+                </tr>
+                <tr>
+                    <td>Rating:</td><td><input type="text" name="rating" value="<%= rating %>" required /></td>
+                </tr>
+                <tr>
+                    <td>Running Time:</td><td><input type="text" name="runningTime" value="<%= runningTime %>" required /></td>
+                </tr>
+                <tr>
+                    <td>Review:</td><td><input type="text" name="review" value="<%= review %>" required /></td>
+                </tr>
+                <tr>
+                    <td align="right" colspan="2">
+                        <input type="submit" />
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </p>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <% include ../partials/head %>
+</head>
+<body>
+    <% include ../partials/header.ejs %>
+
+    <% include ../partials/collectionNavigation.ejs %>
+
+    <p>
+        <table width="300">
+            <tr>
+                <td align="right" colspan="2">
+                    <a href="/collections/airguns/create"><i class="fa fa-plus-square fa-lg"></i></a>
+                </td>
+            </tr>
+            <% airguns.forEach(function(item) { %>
+            <tr>
+                <td width="110">Make:</td><td><%= item.make %></td>
+            </tr>
+            <tr>
+                <td>Model:</td><td><%= item.model %></td>
+            </tr>
+            <tr>
+                <td>Caliber:</td><td><%= item.caliber %></td>
+            </tr>
+            <tr>
+                <td>Action:</td><td><%= item.action %></td>
+            </tr>
+            <tr>
+                <td align="right" colspan="2">
+                    <a href="/collections/airguns/<%= item._id %>"><i class="fa fa-pencil-square-o fa-lg"></i></a> |
+                    <a href="/collections/airguns/delete/<%= item._id %>"><i class="fa fa-times fa-lg"></i></a>
+                    <hr size='1'>
+                </td>
+            </tr>
+            <% }) %>
+        </table>
+    </p>
+</body>
+</html>

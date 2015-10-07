@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <% include ../partials/head %>
+</head>
+<body>
+
+    <% include ../partials/header.ejs %>
+
+    <p><% include ../partials/collectionNavigation.ejs %></p>
+
+    <p>
+        <form action="<%= formUrl %>" method="post">
+            <table width="300">
+                <tr>
+                    <td width="110">Make:</td><td><input type="text" name="make" value="<%= make %>" required /></td>
+                </tr>
+                <tr>
+                    <td>Model:</td><td><input type="text" name="model" value="<%= model %>" required /></td>
+                </tr>
+                <tr>
+                    <td>Caliber:</td><td><input type="text" name="caliber" value="<%= caliber %>" required /></td>
+                </tr>
+                <tr>
+                    <td>Action:</td><td><input type="text" name="action" value="<%= action %>" required /></td>
+                </tr>
+                <tr>
+                    <td align="right" colspan="2">
+                        <input type="submit" />
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </p>
+</body>
+</html>
